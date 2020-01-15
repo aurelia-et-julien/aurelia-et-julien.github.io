@@ -29,7 +29,7 @@
     }
 
     .hero .hero-content {
-        padding-top: 90px;
+        padding-top: 130px;
     }
 
     .header-nav {
@@ -258,7 +258,7 @@
 
 @media all and (max-width: 640px) {
     .hero .hero-content {
-        padding-top: 80px;
+        padding-top: 120px;
     }
 
     #eng-pics .img-wrap i {
@@ -297,7 +297,7 @@
 
 @media all and (max-width: 480px) {
     .hero .hero-content {
-        padding-top: 50px;
+        padding-top: 120px;
     }
     
     .hero .hero-content img {
@@ -361,7 +361,7 @@
 
 @media all and (max-width: 320px) {
     .hero .hero-content {
-        padding-top: 50px;
+        padding-top: 120px;
     }
 
     .rsvp {
