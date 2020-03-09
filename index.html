@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
@@ -416,107 +416,6 @@
     </div>
 </section>
 
-<!--
-<section id="eng-pics" class="section-padding">
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Engagement Pics</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2942-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/_RFX2942-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3483-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/IMG_3483-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2992-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/_RFX2992-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/_RFX3064-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/_RFX3064-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4089-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/NGP_4089-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4119-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/NGP_4119-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row hidden-lg hidden-md hidden-xs">
-            <div class="col-xs-12 section-border section-padding"></div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="diamond floating-logo">
-                <img src="img/sketch-logo.png" alt="Sketch Logo">
-                <div class="ring"></div>
-            </div>
-        </div>
-    </div>
-</section>
--->
-
-<!--
-<section id="video-bg" class="hidden-sm hidden-xs">
-    <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://youtu.be/9giqL1H6yRs',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
-    </div>
-    <div id="video-content">
-        <h5>Kolkata</h5>
-        <p>City of joy</p>
-    </div>
-</section>
--->
-
-
 <section class="rsvp text-center" id="rsvp">
 
     <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
@@ -545,12 +444,22 @@
                       action=""
                       method="POST">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-12">
                             <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Email"
-                                                                     required>
+                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                class="" min="3"
+                                                                placeholder="Code invité"
+                                                                required>
                             </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><select name="present" class="form-input-group form-control form-control-lg">
+                                    <option>Présence au mariage: Oui</option> 
+                                    <option>Présence au mariage: Non</option> 
+                                 </select>
+                            </div>
+                            
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
@@ -559,22 +468,34 @@
                                                                  required>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="participants" class="" min="0"
+                                <i class="fa fa-glass"></i><input type="number" name="participants" class="" min="0"
                                                                   max="10"
-                                                                  placeholder="Nombre de participants"
+                                                                  placeholder="Nombre d'adultes"
                                                                   required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Code invité"
-                                                                required>
+                                <i class="fa fa-child"></i><input type="number" name="enfants" class="" min="0"
+                                                                  max="10"
+                                                                  placeholder="Nombre de menus enfants"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-cutlery"></i><input  name="brunch" class="" 
+                                                                  placeholder="Présents au brunch?"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-cutlery"></i><input name="restrictions" class="" 
+                                                                  placeholder="Restrictions alimentaires?"
+                                                                  required>
                             </div>
                         </div>
                     </div>
